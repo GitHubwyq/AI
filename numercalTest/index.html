@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>人脸融合</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container flex flex_k">
+        <div class="con">
+            <p class="title">
+                <span>选择融脸素材</span>
+            </p>
+            <div class="fixedPho flex flex_k">
+                <div class="leftPho">
+                    <p class="leftTitle flex flex_al flex_k">
+                        <span>模板图</span>
+                        <input type="file" name="file" id="file" class="inputfile" accept="image/jpeg,image/jpg" onchange="mouldPho(this)" /> 
+                        <label for="file" class='btn flex flex_al flex_hc'>上传文件</label> 
+                    </p>
+                    <div class="leftPhoCon">
+                        <!-- <img src="https://www.faceplusplus.com.cn/scripts/demoScript/images/demo-pic111.jpg" id="show" alt=""> -->
+                        <img src="" id="show" alt="">
+                    </div>
+                </div>
+                <div class="rightPho">
+                    <p class="rightTitle flex flex_al flex_k">
+                        <span>融合图</span>
+                        <input type="file" name="file1" id="file1" class="inputfile" accept="image/jpeg,image/jpg" onchange="fusePho(this)" /> 
+                        <label for="file1" class='btn flex flex_al flex_hc'>上传文件</label>
+                    </p>
+                    <div class="rightPhoCon">
+                        <!-- <img src="https://www.faceplusplus.com.cn/scripts/demoScript/images/demo-pic114.jpg" id="show1" alt=""> -->
+                        <img src="" id="show1" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bottTitle">
+                <button class="proBtn" id="proBtn">开始制作</button>
+            </div>
+            <!-- <p class="bottTitle">
+                <span>点击左右两侧相册可以更换图片</span>
+            </p> -->
+        </div>
+        <div class="conReselt">
+            <p class="title">
+                <span>融脸结果分析</span>
+            </p>
+            <div class='resultPhoCon flex flex_hc'>
+                <div class="resultPho">
+                    <img class="uploadpic" src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.2/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+<script src="./js/index.js"></script>
+</html>
